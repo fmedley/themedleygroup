@@ -199,7 +199,32 @@
 .callbtn:hover{color:#fff}
 .nav .callbtn{margin-left:clamp(14px,2.4vw,34px)}
 @media (max-width:620px){.hd{height:auto;min-height:64px;padding-block:8px}.hd .brand{align-self:stretch}.callbtn{font-size:13px;gap:5px}.callbtn svg{width:14px;height:14px}}
+  .mstep .mbar{height:5px;background:#e6ddca;border-radius:999px;overflow:hidden;margin:4px 0 22px}
+  .mstep .mbar span{display:block;height:100%;width:33.33%;background:var(--gold-deep);transition:width .3s}
+  .mstep .mq{font-weight:600;font-size:16px;color:var(--ink);margin-bottom:16px}
+  .opts{display:flex;flex-direction:column;gap:10px}
+  .opt{text-align:left;font-family:var(--font-body);font-weight:600;font-size:15px;color:var(--ink);background:#f4f1ea;border:1.5px solid #e0d8c6;border-radius:10px;padding:14px 16px;cursor:pointer;transition:border-color .15s,background .15s,transform .1s}
+  .opt:hover{border-color:var(--gold-deep);background:#fff}
+  .opt.sel{border-color:var(--gold-deep);background:#fff;box-shadow:inset 0 0 0 1px var(--gold-deep)}
+  .opt:active{transform:scale(.99)}
+  .back{background:none;border:0;color:var(--muted);font-family:var(--font-body);font-weight:600;font-size:14px;cursor:pointer;margin-top:16px;padding:6px 0}
+  .back:hover{color:var(--ink)}
+  .mrow{display:flex;align-items:center;justify-content:space-between;gap:14px}
+  .mrow .back{margin-top:0}
+  .testi{background:var(--paper-2);padding-block:clamp(58px,8vw,108px)}
+  .testi h2{margin:14px 0 clamp(30px,4vw,48px)}
+  .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2vw,26px)}
+  .tcard{background:#fff;border:1px solid #e7dec9;border-radius:16px;padding:clamp(24px,2.3vw,32px);display:flex;flex-direction:column;box-shadow:0 20px 50px -34px rgba(22,34,45,.5)}
+  .tcard .quote{font-family:var(--font-head);font-weight:700;font-size:56px;line-height:.4;color:var(--gold);height:26px}
+  .tcard blockquote{color:#44525f;font-size:14.5px;line-height:1.66;margin:8px 0 18px;flex:1}
+  .tcard figcaption{font-family:var(--font-head);font-weight:600;font-size:14px;color:var(--ink);padding-top:15px;border-top:1px solid #eee4d0}
+  @media (max-width:860px){.tgrid{grid-template-columns:1fr}}
 </style>
+<meta property="og:image" content="https://www.themedleygroup.net/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.themedleygroup.net/og-image.jpg">
 </head>
 <body>
 <!-- ======================= HERO ======================= -->
@@ -375,26 +400,78 @@
   </div>
 </section>
 
+<!-- ======================= TESTIMONIALS ======================= -->
+<section class="testi" id="testimonials">
+  <div class="wrap">
+    <span class="eyebrow">Client Experiences</span>
+    <h2>Trusted when the stakes are high.</h2>
+    <div class="tgrid">
+      <figure class="tcard">
+        <div class="quote">“</div>
+        <blockquote>Working with The Medley Group was an exceptional experience from beginning to end. Securing $30 million in debt financing required more than financial expertise, it required a trusted advisor who understood our business, anticipated challenges, and remained committed to our success. The level of personal attention, responsiveness, and customer service was outstanding. We never felt like just another transaction. I would highly recommend them to any organization seeking a knowledgeable and dependable financial partner.</blockquote>
+        <figcaption>Client · $30M Debt Financing</figcaption>
+      </figure>
+      <figure class="tcard">
+        <div class="quote">“</div>
+        <blockquote>When our company needed $10 million in mezzanine financing, we knew a conventional approach wouldn't be enough. The Medley Group brought a sophisticated understanding of capital structures, creative problem-solving, and the ability to navigate complex financing requirements. What impressed us most was their ability to understand our long-term objectives and approach the transaction. Their expertise and commitment made a meaningful difference throughout the process. The Medley Group is the kind of financial advisory firm you want at the table when the stakes are high.</blockquote>
+        <figcaption>Client · $10M Mezzanine Financing</figcaption>
+      </figure>
+      <figure class="tcard">
+        <div class="quote">“</div>
+        <blockquote>A $55 million debt and equity financing transaction demands exceptional financial knowledge, sound judgment, and the ability to bring complex moving parts together. The Medley Group demonstrated the caliber of leadership and strategic thinking we needed for a transaction of this magnitude. Their understanding of both debt and equity financing, attention to detail, and commitment to our objectives gave us confidence throughout the engagement. The Medley Group brings the expertise, professionalism, and perspective that can make all the difference.</blockquote>
+        <figcaption>Client · $55M Debt &amp; Equity Financing</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ======================= CONTACT ======================= -->
 <section class="contact" id="contact">
   <div class="wrap">
     <span class="eyebrow">Contact Us</span>
     <h2>Let's discuss your project.</h2>
     <div class="grid">
-      <form class="cform" id="contactForm" action="https://formsubmit.co/fred@themedleygroup.net" method="POST">
-        <h3>Get in Touch</h3>
+      <form class="cform mstep" id="contactForm" action="https://formsubmit.co/fred@themedleygroup.net" method="POST">
+        <h3>Request a Consultation</h3>
+        <div class="mbar"><span></span></div>
+        <div class="mstepwrap">
+          <div class="step" data-step="0">
+            <p class="mq">What are you looking to finance?</p>
+            <div class="opts" data-target="f_type">
+              <button type="button" class="opt">Construction</button>
+              <button type="button" class="opt">Bridge loan</button>
+              <button type="button" class="opt">Acquisition</button>
+              <button type="button" class="opt">Refinance</button>
+              <button type="button" class="opt">Mezzanine</button>
+              <button type="button" class="opt">Equity placement</button>
+              <button type="button" class="opt">Not sure yet</button>
+            </div>
+          </div>
+          <div class="step" data-step="1" hidden>
+            <p class="mq">How much financing do you need?</p>
+            <div class="opts" data-target="f_amount">
+              <button type="button" class="opt">$10M – $25M</button>
+              <button type="button" class="opt">$25M – $75M</button>
+              <button type="button" class="opt">$75M – $150M</button>
+              <button type="button" class="opt">$150M+</button>
+            </div>
+            <button type="button" class="back">← Back</button>
+          </div>
+          <div class="step" data-step="2" hidden>
+            <p class="mq">Where can we reach you?</p>
+            <div class="field"><label>Name <span class="req">*</span></label><input type="text" name="Name" required></div>
+            <div class="field"><label>Email <span class="req">*</span></label><input type="email" name="Email" required></div>
+            <div class="field"><label>Phone</label><input type="tel" name="Phone"></div>
+            <div class="field"><label>Anything else? <span style="color:var(--muted);font-weight:500">(optional)</span></label><textarea name="Message"></textarea></div>
+            <div class="mrow"><button type="button" class="back">← Back</button><button class="btn" type="submit">Send Request</button></div>
+          </div>
+        </div>
+        <input type="hidden" name="Financing Type" id="f_type">
+        <input type="hidden" name="Loan Amount" id="f_amount">
         <input type="hidden" name="_subject" value="New consultation request — The Medley Group">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
         <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="row2">
-          <div class="field"><label>First Name <span class="req">*</span></label><input type="text" name="First Name" required></div>
-          <div class="field"><label>Last Name <span class="req">*</span></label><input type="text" name="Last Name" required></div>
-        </div>
-        <div class="field"><label>Email <span class="req">*</span></label><input type="email" name="Email" required></div>
-        <div class="field"><label>Subject</label><input type="text" name="Subject"></div>
-        <div class="field"><label>Message</label><textarea name="Message"></textarea></div>
-        <button class="btn" type="submit">Submit</button>
         <div class="formnote" id="formNote" role="status" aria-live="polite"></div>
       </form>
 
@@ -438,18 +515,32 @@
   (function(){var y=document.getElementById('yr');if(y)y.textContent=new Date().getFullYear();})();
   (function(){
     var f=document.getElementById('contactForm');if(!f)return;
+    var steps=[].slice.call(f.querySelectorAll('.step'));
+    var bar=f.querySelector('.mbar span');
     var note=document.getElementById('formNote');
+    var cur=0;
+    function show(i){cur=i;steps.forEach(function(s,idx){s.hidden=idx!==i;});bar.style.width=((i+1)/steps.length*100)+'%';}
+    f.querySelectorAll('.opts').forEach(function(g){
+      var t=g.getAttribute('data-target');
+      g.querySelectorAll('.opt').forEach(function(btn){
+        btn.addEventListener('click',function(){
+          g.querySelectorAll('.opt').forEach(function(b){b.classList.remove('sel');});
+          btn.classList.add('sel');
+          var h=document.getElementById(t); if(h) h.value=btn.textContent;
+          setTimeout(function(){ if(cur<steps.length-1) show(cur+1); },200);
+        });
+      });
+    });
+    f.querySelectorAll('.back').forEach(function(b){b.addEventListener('click',function(){ if(cur>0) show(cur-1);});});
     f.addEventListener('submit',async function(e){
       e.preventDefault();
       note.className='formnote';note.textContent='Sending…';
       var data=Object.fromEntries(new FormData(f).entries());
       try{
-        var r=await fetch('https://formsubmit.co/ajax/fred@themedleygroup.net',{
-          method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
-          body:JSON.stringify(data)});
+        var r=await fetch('https://formsubmit.co/ajax/fred@themedleygroup.net',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
         if(!r.ok)throw new Error('bad');
-        f.reset();
-        note.className='formnote ok';note.textContent='Thank you — your message has been sent. We will be in touch shortly.';
+        f.reset(); show(0);
+        note.className='formnote ok';note.textContent='Thank you — your request has been sent. We will be in touch shortly.';
       }catch(err){
         note.className='formnote ok';
         note.innerHTML='Thanks! If you don\'t hear back soon, email us directly at <a href="mailto:info@themedleygroup.net" style="color:#f2c431">info@TheMedleyGroup.net</a>.';
