@@ -9,6 +9,20 @@ The Medley Group is a family-owned, faith-based commercial loan brokerage with 1
 - Loan Structuring & Packaging
 - Financial Analysis & Strategy
 Financing types: construction, bridge, mezzanine, private/non-bank debt, equity placement, acquisition, refinance, and recapitalization.
+Sectors financed: hotels & hospitality, casino & gaming, multifamily & apartments, healthcare & medical facilities, stadiums & sports/entertainment venues, and large-scale commercial real estate.
+
+## Financing Pages
+- Construction Loans: https://www.themedleygroup.net/construction-loans.html
+- Bridge Loans: https://www.themedleygroup.net/bridge-loans.html
+- Mezzanine Financing: https://www.themedleygroup.net/mezzanine-financing.html
+- Equity Placement: https://www.themedleygroup.net/equity-placement.html
+- Hotel & Hospitality Financing: https://www.themedleygroup.net/hotel-financing.html
+- Acquisition Financing: https://www.themedleygroup.net/acquisition-financing.html
+- Refinance & Recapitalization: https://www.themedleygroup.net/refinance-recapitalization.html
+- Multifamily & Apartment Financing: https://www.themedleygroup.net/multifamily-financing.html
+- Healthcare & Medical Facility Financing: https://www.themedleygroup.net/healthcare-financing.html
+- Casino & Gaming Financing: https://www.themedleygroup.net/casino-gaming-financing.html
+- Stadium & Sports Venue Financing: https://www.themedleygroup.net/sports-venue-financing.html
 
 ## Pages
 - Home: https://www.themedleygroup.net/
