@@ -169,9 +169,9 @@
   .field{margin-bottom:15px}
   .field label{display:block;font-size:12.5px;font-weight:600;letter-spacing:.03em;color:var(--ink);margin-bottom:6px}
   .field label .req{color:var(--gold-deep)}
-  .field input,.field textarea{width:100%;font-family:var(--font-body);font-size:15px;color:var(--ink);background:#f4f1ea;
+  .field input,.field textarea,.field select{width:100%;font-family:var(--font-body);font-size:15px;color:var(--ink);background:#f4f1ea;
     border:1px solid #e0d8c6;border-radius:9px;padding:11px 13px;transition:border-color .2s,background .2s}
-  .field input:focus,.field textarea:focus{outline:none;border-color:var(--gold-deep);background:#fff}
+  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--gold-deep);background:#fff}
   .field textarea{min-height:120px;resize:vertical}
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .btn{appearance:none;border:0;cursor:pointer;font-family:var(--font-body);font-weight:700;letter-spacing:.06em;
@@ -476,16 +476,30 @@
             <button type="button" class="back">← Back</button>
           </div>
           <div class="step" data-step="2" hidden>
+            <p class="mq">What stage is your project in?</p>
+            <div class="opts" data-target="f_stage">
+              <button type="button" class="opt">Planning / feasibility</button>
+              <button type="button" class="opt">Ready to seek financing</button>
+              <button type="button" class="opt">Property under contract</button>
+              <button type="button" class="opt">Existing loan / refinancing</button>
+              <button type="button" class="opt">Not sure yet</button>
+            </div>
+            <button type="button" class="back">← Back</button>
+          </div>
+          <div class="step" data-step="3" hidden>
             <p class="mq">Where can we reach you?</p>
             <div class="field"><label>Name <span class="req">*</span></label><input type="text" name="Name" required></div>
             <div class="field"><label>Email <span class="req">*</span></label><input type="email" name="Email" required></div>
             <div class="field"><label>Phone</label><input type="tel" name="Phone"></div>
+            <div class="field"><label>Project location <span style="color:var(--muted);font-weight:500">(city &amp; state)</span></label><input type="text" name="Project Location" placeholder="e.g., Las Vegas, NV"></div>
+            <div class="field"><label>Property type <span style="color:var(--muted);font-weight:500">(optional)</span></label><select name="Property Type"><option value="">Select…</option><option>Hotel / hospitality</option><option>Casino / gaming</option><option>Multifamily / apartments</option><option>Construction / development</option><option>Retail / mixed-use</option><option>Healthcare / medical</option><option>Office</option><option>Industrial</option><option>Stadium / sports venue</option><option>Other</option></select></div>
             <div class="field"><label>Anything else? <span style="color:var(--muted);font-weight:500">(optional)</span></label><textarea name="Message"></textarea></div>
             <div class="mrow"><button type="button" class="back">← Back</button><button class="btn" type="submit">Send Request</button></div>
           </div>
         </div>
         <input type="hidden" name="Financing Type" id="f_type">
         <input type="hidden" name="Loan Amount" id="f_amount">
+        <input type="hidden" name="Project Stage" id="f_stage">
         <input type="hidden" name="_subject" value="New consultation request — The Medley Group">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
