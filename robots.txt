@@ -1,15 +1,43 @@
+# The Medley Group — crawler access
+# Open to all well-behaved crawlers. AI assistants and search engines welcome.
+
 User-agent: *
 Allow: /
 
+# AI assistants — live retrieval (triggered when a user asks the assistant)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# AI assistants — indexing / training crawlers
 User-agent: GPTBot
 Allow: /
+
 User-agent: ClaudeBot
 Allow: /
+
 User-agent: PerplexityBot
 Allow: /
+
 User-agent: Google-Extended
 Allow: /
+
 User-agent: CCBot
+Allow: /
+
+# Search engines
+User-agent: Googlebot
 Allow: /
 
 Sitemap: https://www.themedleygroup.net/sitemap.xml
